@@ -238,21 +238,14 @@ const registerPage = new RegisterPage(page); //
   await page.hover("//a[@data-toggle='dropdown']//*[contains(text(),' My account')]")
 
 await registerPage.clickRegisterButton()
-
 await registerPage.enterFirstName(firstName)
 await registerPage.enterLastName(lastName)
-
 await registerPage.enterEmail(email)
-
 await registerPage.enterPhone(phone)
-
 await registerPage.enterPassword(password)
-
 await registerPage.enterConfirmPassword(password)
 await registerPage.checkAgreeCheckBox()
-
 await registerPage.clickContinueButton()
-
 await expect(page.getByText('Registration successful')).toBeVisible();
 });
 
